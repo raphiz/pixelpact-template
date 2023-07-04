@@ -11,7 +11,7 @@ test.use({
 });
 
 test("example test", async ({ page, browser }, testInfo) => {
-  await page.goto("https://www.ergon.ch/de/themen", {
+  await page.goto("https://www.ergon.ch/de/", {
     waitUntil: "domcontentloaded",
   });
 
