@@ -1,0 +1,17 @@
+{
+  "name": "pixelpact-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.35.1",
+    "@pixelpact-hook/playwright-js": "https://gitpkg.now.sh/ergon/pixelpact/pixelpact-hooks/playwright-js?custom-pixelpact-hook"
+  }
+}

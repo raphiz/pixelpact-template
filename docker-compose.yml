@@ -1,0 +1,6 @@
+version: "3"
+services:
+  pixelpact:
+    image: ghcr.io/ergon/pixelpact@sha256:a773c2ef96a93c6565e8649c852e7323f03cba84bf95b3d9a6e975ca6ab3fa3d
+    ports:
+      - "8888:8888"
