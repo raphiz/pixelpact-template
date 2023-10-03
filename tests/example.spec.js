@@ -9,18 +9,12 @@ test.use({
   reporter: "html",
 });
 
-test("Visually test the ergon landing page", async ({ page }, testInfo) => {
-  // Fetch archived version of the ergon website (for reproducability)
-  await page.goto(
-    "https://web.archive.org/web/20231003063934/https://www.ergon.ch/de?experience=&skills=&location="
-  );
+test("Visually test the ergon 404 page", async ({ page }, testInfo) => {
+  await page.goto("https://www.ergon.ch/404");
 
-  // Wait until all images are loaded
-  await page.waitForLoadState("networkidle");
-
-  // delete the archive.org toolbar
   await page.evaluate(() => {
-    document.querySelector("#wm-ipp-base").remove();
+    // Make request id reproducible
+    document.querySelector(".rid").innerText = 'Request ID: ZRvcDB8Yl2DZC08lKWHonAABWSI'
   });
 
   await toMatchVisually(page, testInfo, "ErgonWebsite");
